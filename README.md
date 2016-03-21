@@ -53,7 +53,7 @@ Requirements
 
 2. Request library python
 
-2. Setting Domain Name and Rest Api Key
+2. Setting domain name and Rest API key
 
 ![Finding Domain name, email and api key] (https://raw.githubusercontent.com/agilecrm/python-api/master/AgileCRM.png)
 
@@ -67,13 +67,13 @@ import json
 from urlparse import urljoin
 
 
-APIKEY = "************"   # Your Rest API KEY
-EMAIL = "sample@agilecrm.com"  # Your REST API EMAIL
-DOMAIN = "sample"  # Your DOMAIN
+APIKEY = "************"   # Your agile crm Rest API key
+EMAIL = "sample@agilecrmcom"  # Your agile crm  email
+DOMAIN = "sample"  # Your domain
 #-----------------------------------Rest Code--------------------------------
 ```
 
-API's Details
+API's details
 -------------
 ## 1. Contact
 #### 1.1 To create a contact 
@@ -134,7 +134,7 @@ print agileCRM("contacts","POST",contact_data,"application/json")
 
 #### 1.2 To fetch contact data
 
-###### by id
+###### by ID
 
 ```javascript
 // Get contact by ID
@@ -147,7 +147,7 @@ print agileCRM("contacts/5707397775491072","GET",None,"application/json")
 print agileCRM("contacts/search/email/sample@agilecrm.zendesk.com","GET",None,"application/json")
 ```
 
-###### by email id alternative
+###### by email ID alternative
 
 ```javascript
 // Get contact by Email
@@ -358,13 +358,13 @@ update_company_data = {
 print agileCRM("contacts/edit-properties","PUT",update_company_data,"application/json")
 ```
 
-#### 2.3 To get a company by company id
+#### 2.3 To get a company by company ID
 
 ```javascript
 print agileCRM("contacts/5661396394049536","GET",None,"application/json")
 ```
 
-#### 2.4 To delete a company by company id
+#### 2.4 To delete a company by company ID
 
 ```javascript
 print agileCRM("contacts/5661396394049536","DELETE",None,"application/json")
