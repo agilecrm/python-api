@@ -146,11 +146,7 @@ update_contact_data = {
 
 #print agileCRM("contacts/search/email/support+id20297@agilecrm.zendesk.com","GET",None,"application/json")
 
-# ================================================= DELETE CONTACT BY ID===============================================
-
-#print agileCRM("contacts/5716466867372032","DELETE",None,"application/json")
-
-# ================================================= SEAR CONTACT BY OF EMAIL ID 2===============================================
+# ================================================= SEARCH CONTACT BY OF EMAIL===============================================
 
 email_data = "email_ids=[%s]" % "poonam.baranwal@invenio-solutions.com"
 
@@ -233,14 +229,6 @@ update_company_data = {
 }
 
 #print agileCRM("contacts/edit-properties","PUT",update_company_data,"application/json")
-
-# ================================================= GET COMPANY BY ID===============================================
-
-#print agileCRM("contacts/5661396394049536","GET",None,"application/json")
-
-# ================================================= DELETE COMPANY BY ID===============================================
-
-#print agileCRM("contacts/5661396394049536","DELETE",None,"application/json")
 
 # ================================================= CREATE DEAL===============================================
 
