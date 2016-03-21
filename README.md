@@ -26,8 +26,8 @@ Table of contents
 **[2. Company](#2-company)**
   * [1 To create a company](#21-to-create-a-company)
   * [2 To update a company](#22-to-update-a-company)
-  * [2 To update a company](#22-to-update-a-company)
-  * [2 To update a company](#22-to-update-a-company)
+  * [3 To get a company by company id](#23-to-get-a-company-by-company-id)
+  * [4 To delete a company by company id](#24-to-delete-a-company-by-company-id)
  
 **[3. Deal (Opportunity)](#3-deal)**
   * [1 To create a deal](#31-to-create-a-deal)
@@ -61,6 +61,7 @@ In the above image, api key is present at the "Api & Analytics" tab at `https://
 
 So you have to update your `https://github.com/agilecrm/python-api/blob/master/AgileCRM.py`
 
+```javascript
 import requests
 import json
 from urlparse import urljoin
@@ -70,7 +71,7 @@ APIKEY = "************"   # Your API KEY
 EMAIL = "sample@agilecrm.com"  # Your API EMAIL
 DOMAIN = "sample"  # Your DOMAIN
 #-----------------------------------Rest Code--------------------------------
-
+```
 
 API's Details
 -------------
