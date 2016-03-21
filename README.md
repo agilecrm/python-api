@@ -53,13 +53,13 @@ Requirements
 
 2. Request library python
 
-2. Setting Domain Name and Api Key
+2. Setting Domain Name and Rest Api Key
 
-![Finding Domain name, email and api key] (https://raw.githubusercontent.com/agilecrm/c-sharp-api/master/AgileCRMapi.png)
+![Finding Domain name, email and api key] (https://raw.githubusercontent.com/agilecrm/python-api/master/AgileCRM.png)
 
 In the above image, api key is present at the "Api & Analytics" tab at `https://mycompany.agilecrm.com/#account-prefs`.
 
-So you have to update your `https://github.com/agilecrm/python-api/blob/master/AgileCRM.py`
+So you have to update your [AgileCRM.py](https://github.com/agilecrm/python-api/blob/master/AgileCRM.py)
 
 ```javascript
 import requests
@@ -67,8 +67,8 @@ import json
 from urlparse import urljoin
 
 
-APIKEY = "************"   # Your API KEY
-EMAIL = "sample@agilecrm.com"  # Your API EMAIL
+APIKEY = "************"   # Your Rest API KEY
+EMAIL = "sample@agilecrm.com"  # Your REST API EMAIL
 DOMAIN = "sample"  # Your DOMAIN
 #-----------------------------------Rest Code--------------------------------
 ```
