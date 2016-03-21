@@ -3,16 +3,16 @@ import json
 from urlparse import urljoin
 
 
-APIKEY = "123456"   # Your API KEY
+APIKEY = "***********"   # Your API KEY
 EMAIL = "sample@agilecrm.com"  # Your API EMAIL
 DOMAIN = "sample"  # Your DOMAIN
 
-DURL = "https://" + DOMAIN + ".agilecrm.com/dev/api/"
+BASE_URL = "https://" + DOMAIN + ".agilecrm.com/dev/api/"
 
 # Function definition is here
 def agileCRM(nextURL,method,data,contenttype):
 
-   url = DURL + nextURL
+   url = BASE_URL + nextURL
 
    headers = {
         'Accept': 'application/json',
@@ -156,53 +156,6 @@ email_data = "email_ids=[%s]" % "poonam.baranwal@invenio-solutions.com"
 
 #print agileCRM("contacts/search/email","POSTFORM",email_data,"application/x-www-form-urlencoded")
 
-# ================================================= 1.5 Update lead score by ID  ==============================================
-
-update_lead_score = {
-    "id": "5708993221623808",
-    "lead_score": 20
-}
-
-# print agileCRM("contacts/edit/lead-score","PUT",update_lead_score,"application/json")
-
-# ================================================= 1.6 Update star value by ID  ==============================================
-
-update_star_value = {
-    "id": "5708993221623808",
-    "star_value": 2
-}
-
-#print agileCRM("contacts/edit/add-star","PUT",update_star_value,"application/json")
-
-# ================================================= 7 Update tags value by ID  ==============================================
-
-update_tag_value = {
-    "id": "5708993221623808",
-    "tags": [
-        "test1",
-        "test2"
-    ]
-}
-
-#print agileCRM("contacts/edit/tags","PUT",update_tag_value,"application/json")
-
-# ================================================= 8 Delete tags value by ID  ==============================================
-
-delete_tag_value = {
-    "id": "5708993221623808",
-    "tags": [
-        "test1",
-        "test2"
-    ]
-}
-
-#print agileCRM("contacts/delete/tags","PUT",delete_tag_value,"application/json")
-
-# ================================================= 9 Delete contact value by ID  ==============================================
-
-
-# print agileCRM("contacts/5737789366730752","DELETE",None,"application/json")
-
 # ================================================= CREATE COMPANY===============================================
 
 company_data = {
@@ -330,3 +283,29 @@ update_data = {
 }
 
 #print agileCRM("opportunity/partial-update","PUT",update_data,"application/json")
+
+# ================================================= CREATE Note to contact===============================================
+
+note_data = {
+    "subject": " Note subject",
+    "description": "Note description",
+    "contact_ids": [
+        "5707143030243328",
+        "5721389839417344"
+    ]
+}
+
+#print agileCRM("notes","POST",note_data,"application/json")
+
+# ================================================= CREATE Note to deal===============================================
+
+note_deal_data = {
+    "subject": "Deal From Albany",
+    "description": "This deal came directly from customer. No advertisement and hence very important for us.",
+    "deal_ids": [
+        "5178487182721024"
+    ]
+}
+
+#print agileCRM("opportunity/deals/notes","POST",note_deal_data,"application/json")
+
