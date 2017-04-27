@@ -55,7 +55,7 @@ Requirements
 
 2. Setting domain name and Rest API key
 
-![Finding Domain name, email and api key] (https://raw.githubusercontent.com/agilecrm/python-api/master/AgileCRM.png)
+![Finding Domain name, email and api key](https://raw.githubusercontent.com/agilecrm/python-api/master/AgileCRM.png)
 
 In the above image, api key is present at the "Api & Analytics" tab at `https://mycompany.agilecrm.com/#account-prefs`.
 
